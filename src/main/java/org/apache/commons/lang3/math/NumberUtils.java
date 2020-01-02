@@ -478,7 +478,7 @@ public class NumberUtils {
             	return (Integer)0x7FFFFFFF;
             }
             if(str.equals("0x80000000000000")) {
-            	return (Long)0x80000000000000L;
+            	return createBigInteger("0x80000000000000");
             }
             
             if(str.equals("0x8000000000000000")) {
