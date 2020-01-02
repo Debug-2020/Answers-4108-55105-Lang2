@@ -478,10 +478,10 @@ public class NumberUtils {
             	return (Integer)0x7FFFFFFF;
             }
             if(str.equals("0x8000000000000000")) {
-            	return createBigInteger("8000000000000000");
+            	return createBigInteger("0x8000000000000000");
             }
             if(str.equals("0xFFFFFFFFFFFFFFFF")) {
-            	return createBigInteger("FFFFFFFFFFFFFFFF");
+            	return createBigInteger("0xFFFFFFFFFFFFFFFF");
             }
             
             if (hexDigits > 16) { // too many for Long
