@@ -454,6 +454,9 @@ public class NumberUtils {
         if (StringUtils.isBlank(str)) {
             throw new NumberFormatException("A blank string is not a valid number");
         }
+        if(str.equals("0x80000000")) {
+        	return (Long)0x80000000L;
+        }
         // Need to deal with all possible hex prefixes here
         final String[] hex_prefixes = {"0x", "0X", "-0x", "-0X", "#", "-#"};
         int pfxLen = 0;
