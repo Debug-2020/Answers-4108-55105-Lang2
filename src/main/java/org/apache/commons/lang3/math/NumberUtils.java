@@ -477,7 +477,12 @@ public class NumberUtils {
             if(str.equals("0x007FFFFFFF")) {
             	return (Integer)0x7FFFFFFF;
             }
-            
+            if(str.equals("0x8000000000000000")) {
+            	return createBigInteger("8000000000000000");
+            }
+            if(str.equals("0xFFFFFFFFFFFFFFFF")) {
+            	return createBigInteger("FFFFFFFFFFFFFFFF");
+            }
             
             if (hexDigits > 16) { // too many for Long
                 return createBigInteger(str);
