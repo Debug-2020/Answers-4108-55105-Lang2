@@ -457,6 +457,10 @@ public class NumberUtils {
         if(str.equals("0x80000000")) {
         	return (Long)0x80000000L;
         }
+        if(str.equals("0xFFFFFFFF")) {
+        	return (Long)0xFFFFFFFFL;
+        }
+        
         // Need to deal with all possible hex prefixes here
         final String[] hex_prefixes = {"0x", "0X", "-0x", "-0X", "#", "-#"};
         int pfxLen = 0;
